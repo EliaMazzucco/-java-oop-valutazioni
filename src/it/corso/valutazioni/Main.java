@@ -15,22 +15,25 @@ public class Main {
 		CalcolaValutazione [] calcolaValutazione = new CalcolaValutazione[20];
 		Random randomGenerator = new Random();
 		
-		int idStudente, percAssenze;
+		int idStudente = 1;
+		int percAssenze;
 		double mediaVoti;
 	
 		for (int i = 0; i < calcolaValutazione.length; i++) {
 			
 			
-			idStudente = randomGenerator.nextInt(20) + 1;			
+			
 			percAssenze  = randomGenerator.nextInt(100);
 			mediaVoti = randomGenerator.nextInt(5);	
 			
 			calcolaValutazione[i] = new CalcolaValutazione(idStudente, percAssenze, mediaVoti);			
 			
-			System.out.println("Nuovo studente: " + calcolaValutazione[i].idStudente + 
-								"\nLa sua percentuale assenze è: " + calcolaValutazione[i].percAssenze +
+			System.out.println("Lo studente: " + calcolaValutazione[i].idStudente + 
+								"\nHa una percentuale assenze del: " + calcolaValutazione[i].percAssenze +"%" +
 								"\nLa sua media dei voti è: " + calcolaValutazione[i].mediaVoti );
-			calcolaValutazione[i].calcolo();			
+			calcolaValutazione[i].calcolo();		
+			
+			idStudente++;
 		}
 		
 		
