@@ -17,16 +17,24 @@ public class Main {
 		
 		int idStudente, percAssenze;
 		double mediaVoti;
-		
+	
 		for (int i = 0; i < calcolaValutazione.length; i++) {
-			idStudente = randomGenerator.nextInt(20) + 1;
+			
+			
+			idStudente = randomGenerator.nextInt(20) + 1;			
 			percAssenze  = randomGenerator.nextInt(100);
-			mediaVoti = randomGenerator.nextInt(5);
+			mediaVoti = randomGenerator.nextInt(5);	
 			
-			calcolaValutazione[i] = new CalcolaValutazione(idStudente, percAssenze, mediaVoti);
+			calcolaValutazione[i] = new CalcolaValutazione(idStudente, percAssenze, mediaVoti);			
 			
-			System.out.println(calcolaValutazione[i]);
+			System.out.println("Nuovo studente: " + calcolaValutazione[i].idStudente + 
+								"\nLa sua percentuale assenze è: " + calcolaValutazione[i].percAssenze +
+								"\nLa sua media dei voti è: " + calcolaValutazione[i].mediaVoti );
+			calcolaValutazione[i].calcolo();			
 		}
+		
+		
+		
 		
 		
 	}

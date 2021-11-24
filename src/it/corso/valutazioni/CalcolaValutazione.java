@@ -24,7 +24,18 @@ public class CalcolaValutazione {
 	}
 	
 	//Metodi
-	
+	 void calcolo () {
+		 if(percAssenze > 50 ) {
+			 System.out.println("Sei bocciato\n");			 	 
+		 }else if (percAssenze >= 25 && percAssenze <= 50 && mediaVoti > 2) {
+			 System.out.println("Promosso\n");			 
+		 }else if(percAssenze < 25 && mediaVoti >= 2) {
+			 System.out.println("Promosso\n");			 
+		 }else {
+			 System.out.println("Sei bocciato\n");
+		 }
+		 
+	 }
 	
 	//Calcolo promosos o bocciato
 	
